@@ -25,7 +25,7 @@ try:
     import shap  # type: ignore
 except ImportError:
     shap = None
-import matplotlib as plt
+import matplotlib.pyplot as plt
 import streamlit as st
 from sklearn.naive_bayes import GaussianNB
 
