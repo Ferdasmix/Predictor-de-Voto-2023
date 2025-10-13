@@ -25,13 +25,10 @@ try:
     import shap  # type: ignore
 except ImportError:
     shap = None
-import matplotlib.pyplot as plt
+import matplotlib as plt
 import streamlit as st
 from sklearn.naive_bayes import GaussianNB
 
-###############################################################################
-# Configuración general de la página
-###############################################################################
 st.set_page_config(
     page_title="Clasificador de voto 2023",
     page_icon="🗳️",
@@ -91,9 +88,7 @@ CLASS_NAMES = {
     4: "Otros",
 }
 
-###############################################################################
-# Funciones auxiliares
-###############################################################################
+
 @st.cache_data
 def load_dataset(path: str = "DATASET.xlsx") -> pd.DataFrame:
     """Carga el dataset desde el disco o solicita al usuario subirlo.
@@ -348,9 +343,9 @@ def explain_prediction(model, bg: pd.DataFrame, features: dict, class_idx: int, 
     return fig
 
 
-###############################################################################
+
 # Interfaz de usuario
-###############################################################################
+
 def main() -> None:
     st.title("Clasificador de intención de voto 2023")
     st.caption(
