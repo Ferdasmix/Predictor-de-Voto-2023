@@ -201,7 +201,7 @@ def build_user_input_form(defaults: dict) -> dict:
 
     Devuelve un diccionario con las respuestas seleccionadas o ingresadas.
     """
-    st.subheader("Completa el formulario")
+    st.subheader("Completá el formulario")
     with st.form("user_input_form", clear_on_submit=False):
         col1, col2 = st.columns(2)
         with col1:
@@ -347,9 +347,9 @@ def explain_prediction(model, bg: pd.DataFrame, features: dict, class_idx: int, 
 # Interfaz de usuario
 
 def main() -> None:
-    st.title("Clasificador de intención de voto 2023")
+    st.title("Clasificador de voto en las elecciones generales de 2023")
     st.caption(
-        "Completa el formulario y descubre qué candidato o candidata podría haber sido tu elección según el modelo."
+        "Completá el formulario y descubre qué candidato o candidata es más probable que hayas votado."
     )
 
     # Cargar y preprocesar datos
