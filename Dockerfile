@@ -7,4 +7,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-CMD ["python", "app.py"]
+CMD ["streamlit", "run", "Predictor de Voto.py", "--server.port=8501", "--server.address=0.0.0.0"]

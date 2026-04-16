@@ -1,0 +1,36 @@
+# Control de versiones
+.git/
+.gitignore
+
+# Este archivo
+.dockerignore
+
+# Dev container
+.devcontainer/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Entornos virtuales
+.venv/
+venv/
+env/
+
+# Variables de entorno (nunca en la imagen)
+.env
+.env.*
+
+# Documentos que no usa la app
+*.docx
+*.doc
+
+# Logs y temporales
+*.log
+*.tmp
+
+# OS
+.DS_Store
+Thumbs.db
